@@ -20,7 +20,7 @@ function vote(character) {
 
 // Function to load votes on page load
 function loadVotes() {
-    const characters = ['sungjinwoo', 'gojo', 'goku', 'naruto','eren','sasuke'];
+    const characters = ['sungjinwoo', 'gojo', 'goku', 'naruto','eren','sasuke','boruto','yuta'];
     characters.forEach(character => {
         const votesKey = character + '-votes';
         let votes = localStorage.getItem(votesKey);
