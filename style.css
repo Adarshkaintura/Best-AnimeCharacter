@@ -3,7 +3,8 @@
 :root {
   --card-height: 300px;
   --card-width: calc(var(--card-height) / 1.5);
-  --card-margin: 20px;
+  --card-margin: 30px;
+  --row-gap: 70px; /* Added row gap */
 }
 
 * {
@@ -13,18 +14,42 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background: #0e1538;
-  flex-wrap: wrap; /* Allows multiple rows if needed */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: nowrap;
   padding: 20px;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+#rankings-container {
+  width: 200px; /* Fixed width for the rankings container */
+  padding: 20px;
+  background: #1a2341;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-top: var(--card-margin);
+}
+
+#rankings-container h2 {
+  text-align: center;
+}
+
+#rankings {
+  margin-top: 10px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: calc(100% - 240px); /* Adjust width to account for rankings container */
+  margin-top: var(--card-margin);
 }
 
 .card {
@@ -36,7 +61,7 @@ body {
   align-items: flex-end;
   padding: 0 36px;
   perspective: 2500px;
-  margin: var(--card-margin); /* Adjusted to add space between cards */
+  margin: var(--card-margin) var(--card-margin) var(--row-gap); /* Adjusted to add space between cards and rows */
   cursor: pointer; /* Cursor indicates clickable area */
 }
 
@@ -117,11 +142,12 @@ body {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 16px;
+  font-weight: bold;
 }
 
 /* Glowing Neon Button Style for Vote Count */
@@ -159,17 +185,27 @@ body {
   :root {
     --card-height: 200px;
     --card-width: calc(var(--card-height) / 1.5);
-    --card-margin: 10px;
+    --card-margin: 90px;
+    --row-gap: 20px;
   }
 
   .card {
     width: 90%;
     height: auto;
-    margin: 10px 0;
+    margin: 10px 0 var(--row-gap);
   }
 
   .vote-count {
     font-size: 14px;
     padding: 3px 6px;
+  }
+
+  #rankings-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cards-container {
+    width: 100%;
   }
 }

@@ -1,39 +1,24 @@
-// Function to handle votes
-function vote(character) {
-    const votesKey = character + '-votes';
-    let votes = localStorage.getItem(votesKey);
-
-    // If no votes are stored, initialize to 0
-    if (!votes) {
-        votes = 0;
-    }
-
-    // Increment the vote count
-    votes = parseInt(votes) + 1;
-
-    // Store the new vote count in localStorage
-    localStorage.setItem(votesKey, votes);
-
-    // Update the displayed vote count
-    document.getElementById(votesKey).textContent = votes;
-}
-
-// Function to load votes on page load
-function loadVotes() {
-    const characters = ['sungjinwoo', 'gojo', 'goku', 'naruto','eren','sasuke','boruto','yuta'];
-    characters.forEach(character => {
-        const votesKey = character + '-votes';
-        let votes = localStorage.getItem(votesKey);
-
-        // If no votes are stored, initialize to 0
-        if (!votes) {
-            votes = 0;
-        }
-
-        // Update the displayed vote count
-        document.getElementById(votesKey).textContent = votes;
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    const rankingsContainer = document.getElementById('rankings');
+  
+    // Collect vote counts and character names
+    const characters = [];
+    cards.forEach(card => {
+      const voteCount = parseInt(card.querySelector('.vote-count').textContent);
+      const characterName = card.querySelector('.title').getAttribute('src').split('.')[0];
+      characters.push({ name: characterName, votes: voteCount });
     });
-}
-
-// Load votes when the page loads
-window.onload = loadVotes;
+  
+    // Sort characters by vote count in descending order
+    characters.sort((a, b) => b.votes - a.votes);
+  
+    // Display the rankings
+    characters.forEach((character, index) => {
+      const rankingElement = document.createElement('div');
+      rankingElement.textContent = `${index + 1}. ${character.name} - ${character.votes} votes`;
+      rankingElement.classList.add('ranking-item');
+      rankingsContainer.appendChild(rankingElement);
+    });
+  });
+  

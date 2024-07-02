@@ -1,23 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylee.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Character Voting</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    <div class="wrapper">
-        <div class="container">
-          <h1>All Time Best Anime Character</h1>
-        </div>
+  <div id="rankings-container">
+    <h2>Character Rankings</h2>
+    <div id="rankings"></div>
+  </div>
+  <div class="cards-container">
+    <div class="card">
+      <div class="wrapper">
+        <img src="sungjinwooback.jpg" class="cover-image" />
       </div>
-      <audio id="introMusic" autoplay loop>
-        <source src="Netflix-Intro-Sound-Effect.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-      <script src="app.js"></script>
+      <img src="SungJinWoo.png" class="title" />
+      <img src="Sung Jin-Woo _ solo leveling.jpg" class="character" />
+      <span class="vote-count button-style">4</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="gojoback.jpg" class="cover-image" />
+      </div>
+      <img src="SatoruGojo.jpg" class="title" />
+      <img src="gojofront.webp" class="character" />
+      <span class="vote-count button-style">3</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="gokuback.jpg" class="cover-image" />
+      </div>
+      <img src="Goku.png" class="title" />
+      <img src="gokufront.jpg" class="character" />
+      <span class="vote-count button-style">7</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="narutoback.jpg" class="cover-image" />
+      </div>
+      <img src="NarutoUzumaki.webp" class="title" />
+      <img src="narutofront.jpg" class="character" />
+      <span class="vote-count button-style">4</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="erenback.jpg" class="cover-image" />
+      </div>
+      <img src="ErenYeager.jpg" class="title" />
+      <img src="erenfront.jpg" class="character" />
+      <span class="vote-count button-style">1</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="sasaukefront.jpg" class="cover-image" />
+      </div>
+      <img src="SasukeUchiha.jpg" class="title" />
+      <img src="sasukeback.jpg" class="character" />
+      <span class="vote-count button-style">2</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="borutoback.jpg" class="cover-image" />
+      </div>
+      <img src="BorutoUzumaki.webp" class="title" />
+      <img src="borutofront.jpg" class="character" />
+      <span class="vote-count button-style">1</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="yutaback.jpg" class="cover-image" />
+      </div>
+      <img src="YutaOkkotsu.jpg" class="title" />
+      <img src="yutafront.jpg" class="character" />
+      <span class="vote-count button-style">1</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="itachiback.jpg" class="cover-image" />
+      </div>
+      <img src="UchihaItachi.jpg" class="title" />
+      <img src="itachifront.jpg" class="character" />
+      <span class="vote-count button-style">2</span> <!-- Example vote count -->
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        <img src="luffyback.jpg" class="cover-image" />
+      </div>
+      <img src="MonkeyDLuffy.jpg" class="title" />
+      <img src="luffyfront.jpg" class="character" />
+      <span class="vote-count button-style">1</span> <!-- Example vote count -->
+    </div>
+  <div class="card">
+    <div class="wrapper">
+      <img src="madaraback.jpg" class="cover-image" />
+    </div>
+    <img src="MadaraUchiha.jpg" class="title" />
+    <img src="madarafront.jpg" class="character" />
+    <span class="vote-count button-style">2</span> <!-- Example vote count -->
+  </div>
+<div class="card">
+  <div class="wrapper">
+    <img src="hashiramaback.jpg" class="cover-image" />
+  </div>
+  <img src="hashiramafront.jpg" class="title" />
+  <img src="hashiramafront.jpg" class="character" />
+  <span class="vote-count button-style">2</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="Sukunaback.jpg" class="cover-image" />
+  </div>
+  <img src="RyomenSukuna.png" class="title" />
+  <img src="Sukunafront.jpg" class="character" />
+  <span class="vote-count button-style">6</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="itadoriback.webp" class="cover-image" />
+  </div>
+  <img src="ItadoriYuji.jpg" class="title" />
+  <img src="itadoriFront.jpg" class="character" />
+  <span class="vote-count button-style">1</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="Jirenback.jpg" class="cover-image" />
+  </div>
+  <img src="Jiren.jpg" class="title" />
+  <img src="JirenFront.jpg" class="character" />
+  <span class="vote-count button-style">1</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="Zoroback.jpg" class="cover-image" />
+  </div>
+  <img src="RoronoaZoro.jpg" class="title" />
+  <img src="ZoroFront.jpg" class="character" />
+  <span class="vote-count button-style">1</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="aceBack.webp" class="cover-image" />
+  </div>
+  <img src="Ace.jpg" class="title" />
+  <img src="AceFront.jpg" class="character" />
+  <span class="vote-count button-style">1</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="tojiback.jpg" class="cover-image" />
+  </div>
+  <img src="TojiFushiguro.jpg" class="title" />
+  <img src="tojifront.jpg" class="character" />
+  <span class="vote-count button-style">1</span> <!-- Example vote count -->
+</div>
+<div class="card">
+  <div class="wrapper">
+    <img src="vegetaback.jpg" class="cover-image" />
+  </div>
+  <img src="vegeta.png" class="title" />
+  <img src="vegetaFront.jpg" class="character" />
+  <span class="vote-count button-style">2</span> <!-- Example vote count -->
+</div>
+</div>
+  <audio id="introMusic" autoplay loop>
+    <source src="After Hours – The Weeknd _ Instrumental Ringtone - MobCup.Com.Co.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="script.js"></script>
 </body>
 </html>
